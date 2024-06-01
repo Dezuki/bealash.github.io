@@ -1,0 +1,313 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* Imported Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Oswald:wght@200..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@font-face {
+    font-family: 'oswald';
+    src: url("../fonts/sans-serif/Oswald-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+@font-face {
+    font-family: 'robotoslab';
+    src: url("../fonts/serif/robotoslab-regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-optical-sizing: auto;
+}
+@font-face {
+    font-family: 'start2p';
+    src: url("../fonts/sans-serif/PressStart2P-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-optical-size: auto;
+}
+@font-face {
+    font-family: 'josefin';
+    src: url("../fonts/serif/josefinslab-regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-optical-size: auto;
+}
+@font-face {
+    font-family: 'opensans';
+    src: url("../fonts/sans-serif/opensans-regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-optical-size: auto;
+}
+/* Typography */
+
+p {
+    font-family: 'opensans';
+    margin-top: 0rem;
+    
+}
+h2, h3, h4 {
+    font-family: 'robotoslab';
+    font-size: 1rem;
+    margin-top: 0rem;
+}
+
+h1 {
+    font-family: 'start2p';
+    font-size: 3rem;
+    letter-spacing: -0.1325rem;
+    transform: rotate(-5deg);
+    text-align: center;
+    text-shadow: 2px 2px 2px #260801;
+}
+.highlight {
+    font-family: 'start2p';
+    display: inline-block;
+    border: 0.0.0325rem solid #260801;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem 1rem 1rem 0rem;
+    letter-spacing: 0.01325rem;
+    color: #D9D3CC;
+    background-color: #59191E;
+    box-shadow: 5px 5px 4px -1px #260801;
+}
+time {
+    font-family: 'robotoslab';
+    font-size:0.75rem;
+    font-style:italic;
+}
+.attribution {
+    font-family: 'robotoslab', serif;
+    line-height: 1.1875rem;
+    text-align: right;
+    letter-spacing: -0.0625rem;
+    overflow-wrap: break-word;
+    margin-left: 40%;
+}
+
+/* General Setup and Details */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    font-size:1rem;
+}
+
+body {
+    margin: 3rem;
+    min-width: 56.25rem;
+    max-width: 100%;
+}
+/* Layout */
+
+header {
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #734A26;
+    border-bottom: 1px solid #734A26;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: none;
+    text-decoration: none;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 2;
+    grid-row: 1;
+    border-left: 1px solid #734A26;
+    padding-left: 1.5rem;
+}
+
+aside p {
+    font-size: 0.875rem;
+    border-bottom: 1px solid #734A26;
+    padding-bottom: 1.5rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+button {
+    font-family: 'start2p';
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    display: inline-block;
+    border: 0.0.0325rem solid #260801;
+    padding: .5rem 1rem;
+    border-radius: 0.3rem;
+    border-radius: 1rem;
+    color: #D9D3CC;
+    background-color: #59191E;
+    box-shadow: 5px 5px 4px -1px #260801;
+}
+footer {
+    margin-top: 4rem;
+}
+
+/* Images and Figures */
+
+img {
+    width: 100%;
+}
+figure {
+    margin: 0px;
+}
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem;
+}
+aside img {
+    margin-bottom: .5rem;
+}
+.subsection {
+    margin: 1rem 0rem;
+}
+.subsection figure {
+    margin: 0rem 0.25rem;
+    background-color: #BFB8AA;
+}
+.subsection figure figcaption {
+    font-family: 'josefin';
+    color: #260801;
+    font-weight: 800;
+    padding: 0.5rem;    
+}
+
+/* Links and Navigation */
+
+a {
+    text-decoration: none;
+    position: relative;
+    padding: 0rem;
+    font-optical-sizing: auto;
+    color: #293040;
+}
+a.expand {
+    font-family: monospace;
+    font-size: 0.325rem;
+    display: block;
+    margin-top: 0.5rem;
+    letter-spacing: 0.0325rem;
+}
+nav a {
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 1rem;
+    color:#000 !important;
+    font-family: 'start2p', monospace;
+    font-optical-sizing: auto;
+    line-height: 2rem;
+}
+/* unsure if active, focus, and visited styling just won't run on local machine, or if its wrong; need to upload and test */
+nav a:visited {
+    text-decoration: line-through;
+}
+nav a:active {
+    rotate: -5deg;
+}
+nav a:hover::before {
+    content: "{";
+}
+nav a:hover::after {
+    content: "}";
+}
+nav a:focus::before {
+    content: "{";
+}
+nav a:focus::after {
+    content:"}"
+}
+a:visited {
+    color:#59191E;
+}
+/* nth-child to select "blog" on Nav bar to 
+copy example website; a live website might have 
+it set as a active style */
+nav li:nth-child(2) {
+    color: #59191E;
+    rotate: -5deg;
+    text-decoration: line-through;
+}
